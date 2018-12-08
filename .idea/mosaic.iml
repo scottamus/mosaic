@@ -11,4 +11,19 @@
   <component name="TestRunnerService">
     <option name="PROJECT_TEST_RUNNER" value="Unittests" />
   </component>
+  <component name="deploySettings">
+    <option name="samConfigs">
+      <map>
+        <entry key="template.yaml">
+          <value>
+            <DeploySamConfig>
+              <option name="autoExecute" value="true" />
+              <option name="bucketName" value="s3-bucket-hello-world" />
+              <option name="stackName" value="hello-world-prod" />
+            </DeploySamConfig>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
 </module>
