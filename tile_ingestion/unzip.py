@@ -4,7 +4,7 @@ import io
 
 
 def unzip():
-    session = boto3.session.Session(profile_name="default")
+    session = boto3.session.Session(profile_name="default")  # how to have this work in docker container?
     s3 = session.resource("s3")
     bucket = s3.Bucket('scottamus-mosaic')
     obj = bucket.Object('tilesupload/test_files.zip')  # how do I pass this in?
@@ -21,6 +21,7 @@ def unzip():
 
 
 if __name__ == "__main__":
+    unzip()
     print("+================+")
     print("|  Hello world!  |")
     print("+================+")
